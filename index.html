@@ -181,12 +181,7 @@
     .section-card,
     .cta-box,
     .seo-block,
-    .footer-card {
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,0.30);
-      box-shadow: var(--shadow-lux);
-      overflow: hidden;
-    }
+    .footer-card { padding: 26px 30px; text-align: center; background: var(--glass-strong); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
 
     .hero-card,
     .section-card,
@@ -283,6 +278,7 @@
     .contact-inline-wrap,
     .cta-actions,
     .footer-links,
+      justify-content: center;
     .inline-list {
       display: flex;
       flex-wrap: wrap;
@@ -626,15 +622,16 @@
     .footer { padding: 8px 0 54px; margin-top: 34px; font-size: 14px; color: var(--text-soft); }
     .footer .container { padding-top: 0; }
     .footer-card { padding: 26px 30px; text-align: left; background: var(--glass-strong); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
-    .footer-brand { margin-bottom: 8px; font-size: 18px; font-weight: 800; color: var(--primary-dark); }
-    .footer-copy { max-width: 920px; margin: 0; font-size: 14px; line-height: 1.7; color: var(--text-soft); }
-    .footer-expert { display: flex; align-items: center; gap: 16px; margin-top: 22px; }
+    .footer-brand { margin-bottom: 8px; font-size: 22px; font-weight: 900; color: var(--primary-dark); text-align: center; letter-spacing: -.02em; }
+    .footer-copy { max-width: 920px; margin: 0 auto; font-size: 14px; line-height: 1.7; color: var(--text-soft); text-align: center; }
+    .footer-expert { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; margin-top: 22px; text-align: center; }
     .footer-expert img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
     .footer-expert-name { font-weight: 800; color: var(--primary-dark); }
     .footer-expert-role { font-size: 13px; color: var(--text-soft); }
     .footer-expert-meta { margin-top: 4px; font-size: 12px; color: var(--muted); }
-    .footer-bottom { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(15,23,42,0.06); font-size: 12px; color: var(--muted); }
-    .footer-links a { line-height: 1.5; }
+    .footer-bottom { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(15,23,42,0.06); font-size: 12px; color: var(--muted); text-align: center; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 14px; }
+    .footer-links a { line-height: 1.5; text-align: center; }
 
     .sticky-contact {
       position: fixed;
@@ -1000,6 +997,8 @@
           <a href="https://oczernyszenko.github.io/ecodom-p2/">Budowa domu</a>
           <a href="#contact">Kontakt</a>
         </div>
+
+        
         <div class="footer-expert">
           <img src="https://oczernyszenko.github.io/Costa-Blanca-Invest/avatar.png" alt="Olga Chernyshenko" loading="lazy" decoding="async">
           <div>
@@ -1115,4 +1114,4 @@
   }
   </script>
 </body>
-</h
+</html>
