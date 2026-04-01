@@ -440,11 +440,7 @@
     .location-card,
     .faq-card { padding: 28px; }
 
-    .project-card,
-    .category-card {
-      
-    }
-
+    .project-card .card-body,
     .category-card .card-body {
       padding: 24px 26px;
     }
@@ -458,26 +454,75 @@
       transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
     }
 
-    .category-card:first-child {
-      border-color: rgba(154,90,60,0.45); /* terra / chocolate */
-    }
-
-    .category-card:last-child {
-      border-color: rgba(75,138,61,0.45); /* eco green */
-    }
-
+    .project-card:hover,
     .category-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 16px 36px rgba(15,23,42,0.08);
     }
 
-    
+    .project-card img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .project-card .card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 24px 26px 26px;
+    }
+
+    .project-card h3 {
+      margin: 0;
+      font-size: 22px;
+      color: var(--primary-dark);
+      letter-spacing: -.02em;
+    }
+
+    .project-card p {
+      margin: 0;
+      text-align: left;
+    }
+
+    .project-card .card-meta {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .project-card .card-price {
+      font-size: 17px;
+      font-weight: 800;
+      color: #c8742f;
+    }
+
+    .project-card .card-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-soft);
+    }
+
+    .project-card .card-link {
+      margin-top: 6px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .category-card:first-child {
+      border-color: rgba(154,90,60,0.45);
+    }
+
+    .category-card:last-child {
+      border-color: rgba(75,138,61,0.45);
+    }
 
     .chip {
       display: inline-flex;
       align-items: center;
       width: fit-content;
-      margin-bottom: 14px;
+      margin-bottom: 6px;
       padding: 7px 12px;
       border-radius: 999px;
       font-size: 11px;
@@ -672,7 +717,6 @@
       .nav { gap: 14px; }
       .nav a { font-size: 14px; }
       .hero-copy, .section-card, .cta-box, .seo-block, .footer-card { padding: 18px; }
-      
       .hero-image, .hero-image img { min-height: 220px; }
       .contact-links a { font-size: 16px; }
       .footer-links { gap: 14px 18px; }
@@ -692,7 +736,7 @@
       <nav class="nav" aria-label="Główna nawigacja">
         <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/">Strona główna</a>
         <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#categories">Kategorie</a>
-        <a href="https://oczernyszenko.github.io/developerzy--p2/" aria-current="page">Nowe inwestycje</a>
+        <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/" aria-current="page">Nowe inwestycje</a>
         <a href="https://oczernyszenko.github.io/plots/">Działki</a>
         <a href="https://oczernyszenko.github.io/ecodom-p2/">Budowa domu</a>
         <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/#why-us">Dlaczego my</a>
@@ -750,30 +794,75 @@
         <h2>Nowe inwestycje Costa Blanca — apartamenty i wille od deweloperów</h2>
         <p>Każda inwestycja prowadzi do szczegółowej oferty z opisem, zdjęciami, parametrami i lokalizacją.</p>
         <div class="projects-grid">
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Willa 450 m od morza — nowa willa od dewelopera w Torre de la Horadada">
-            <img src="images/premium-investment.jpg" alt="Nowa willa od dewelopera 450 m od morza w Torre de la Horadada na Costa Blanca">
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
+            <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
             <div class="card-body">
-              <div class="chip">Szczegóły inwestycji</div>
-              <h3>Willa 450 m od morza</h3>
-              <p>Torre de la Horadada · nowa willa od dewelopera</p>
+              <div class="chip">Premium · Golf & Lifestyle</div>
+              <h3>Bonalba Golf Hills</h3>
+              <div class="card-meta">Mutxamel koło Alicante</div>
+              <div class="card-price">280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje</div>
+              <p class="card-desc">Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.</p>
+              <div class="card-link">Zobacz inwestycję →</div>
             </div>
           </a>
 
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/apartments-alicante/" class="project-card" aria-label="Apartamenty Alicante — nowe mieszkania od dewelopera na Costa Blanca">
-            <img src="images/new-dev.jpg" alt="Nowe mieszkania Alicante — apartamenty od dewelopera na Costa Blanca">
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
+            <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
             <div class="card-body">
-              <div class="chip">Szczegóły inwestycji</div>
+              <div class="chip">Premium · Golf & Lifestyle</div>
+              <h3>Bonalba Golf Hills</h3>
+              <div class="card-meta">Mutxamel koło Alicante</div>
+              <div class="card-price">280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje</div>
+              <p class="card-desc">Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.</p>
+              <div class="card-link">Zobacz inwestycję →</div>
+            </div>
+          </a>
+
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
+            <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
+            <div class="card-body">
+              <div class="chip">Premium · Golf & Lifestyle</div>
+              <h3>Bonalba Golf Hills</h3>
+              <div class="card-meta">Mutxamel koło Alicante</div>
+              <div class="card-price">280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje</div>
+              <p class="card-desc">Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.</p>
+              <div class="card-link">Zobacz inwestycję →</div>
+            </div>
+          </a>
+
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/apartments-alicante/" class="project-card" aria-label="Apartamenty Alicante — eleganckie mieszkania od dewelopera na Costa Blanca">
+            <img src="images/new-dev.jpg" alt="Apartamenty Alicante — eleganckie mieszkania od dewelopera na Costa Blanca">
+            <div class="card-body">
+              <div class="chip">City & Sea</div>
               <h3>Apartamenty Alicante</h3>
-              <p>Alicante · nowe mieszkania od dewelopera</p>
+              <div class="card-meta">Alicante</div>
+              <div class="card-price">Nowe mieszkania od dewelopera</div>
+              <p class="card-desc">Nowoczesne apartamenty w jednej z najbardziej poszukiwanych lokalizacji Costa Blanca — świetne połączenie miejskiej wygody, dostępu do plaż i wysokiego potencjału najmu całorocznego.</p>
+              <div class="card-link">Zobacz inwestycję →</div>
             </div>
           </a>
 
-          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/penthouse-benidorm/" class="project-card" aria-label="Penthouse Benidorm — property for sale new build w segmencie premium">
-            <img src="images/wood-project-2.jpg" alt="Property for sale Benidorm new build — penthouse w segmencie premium">
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/penthouse-benidorm/" class="project-card" aria-label="Penthouse Benidorm — inwestycja premium z widokiem">
+            <img src="images/wood-project-2.jpg" alt="Penthouse Benidorm — inwestycja premium z widokiem">
             <div class="card-body">
-              <div class="chip">Szczegóły inwestycji</div>
+              <div class="chip">Skyline Premium</div>
               <h3>Penthouse Benidorm</h3>
-              <p>Benidorm · property for sale new build</p>
+              <div class="card-meta">Benidorm</div>
+              <div class="card-price">Segment premium · new build</div>
+              <p class="card-desc">Wyjątkowa nieruchomość dla klientów oczekujących panoramicznych widoków, nowoczesnej architektury i prestiżowego adresu w jednej z najmocniejszych lokalizacji inwestycyjnych Costa Blanca.</p>
+              <div class="card-link">Zobacz inwestycję →</div>
+            </div>
+          </a>
+
+          <a href="https://oczernyszenko.github.io/Costa-Blanca-Invest/pl/new-developments/bonalba-golf-hills/" class="project-card" aria-label="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
+            <img src="images/bonalba-golf-hills-main.jpg" alt="Bonalba Golf Hills — eleganckie apartamenty w otoczeniu golfa i natury">
+            <div class="card-body">
+              <div class="chip">Premium · Golf & Lifestyle</div>
+              <h3>Bonalba Golf Hills</h3>
+              <div class="card-meta">Mutxamel koło Alicante</div>
+              <div class="card-price">280 800 € – 405 600 € · 98–156 m² · 2–3 pokoje</div>
+              <p class="card-desc">Kameralna inwestycja premium w otoczeniu golfa, zieleni i śródziemnomorskiego światła — idealna dla klientów szukających stylu życia, prywatności i mocnego potencjału inwestycyjnego.</p>
+              <div class="card-link">Zobacz inwestycję →</div>
             </div>
           </a>
         </div>
@@ -863,16 +952,16 @@
       </section>
 
       <section id="seo-content" class="seo-article">
-  <h2>Nowe inwestycje na Costa Blanca — apartamenty i wille Alicante–Benidorm</h2>
-  <h3>Rynek nowych inwestycji w Hiszpanii</h3>
-  <p>Rynek nowych inwestycji na Costa Blanca w rejonie Alicante–Benidorm rozwija się dynamicznie i przyciąga zarówno klientów prywatnych, jak i inwestorów. Kluczową przewagą regionu jest połączenie stabilnego popytu, klimatu całorocznego oraz rozwiniętej infrastruktury — od lotniska w Alicante po dostęp do plaż i usług.</p>
-  <h3>Najbardziej popularne lokalizacje</h3>
-  <p>Największym zainteresowaniem cieszą się nowe mieszkania w Alicante oraz nowoczesne inwestycje w Benidormie i Finestrat. To projekty projektowane pod wynajem krótkoterminowy i długoterminowy, ale również pod własne użytkowanie jako second home w Hiszpanii.</p>
-  <h3>Apartamenty i wille od deweloperów</h3>
-  <p>Apartamenty i wille od deweloperów to rozwiązanie dla osób, które chcą kupić nieruchomość w uporządkowanym procesie, bez konieczności prowadzenia budowy. Nowe inwestycje powstają w najlepszych lokalizacjach — blisko morza, infrastruktury i stref turystycznych, co bezpośrednio wpływa na ich potencjał inwestycyjny.</p>
-  <h3>Strategie inwestycyjne</h3>
-  <p>W zależności od celu zakupu można wybrać różne strategie: zakup mieszkania pod wynajem, apartamentu wakacyjnego lub willi jako długoterminowej inwestycji. Costa Blanca pozostaje jednym z najbardziej przewidywalnych rynków nieruchomości w Hiszpanii, szczególnie w pasie Alicante–Benidorm.</p>
-</section>
+        <h2>Nowe inwestycje na Costa Blanca — apartamenty i wille Alicante–Benidorm</h2>
+        <h3>Rynek nowych inwestycji w Hiszpanii</h3>
+        <p>Rynek nowych inwestycji na Costa Blanca w rejonie Alicante–Benidorm rozwija się dynamicznie i przyciąga zarówno klientów prywatnych, jak i inwestorów. Kluczową przewagą regionu jest połączenie stabilnego popytu, klimatu całorocznego oraz rozwiniętej infrastruktury — od lotniska w Alicante po dostęp do plaż i usług.</p>
+        <h3>Najbardziej popularne lokalizacje</h3>
+        <p>Największym zainteresowaniem cieszą się nowe mieszkania w Alicante oraz nowoczesne inwestycje w Benidormie i Finestrat. To projekty projektowane pod wynajem krótkoterminowy i długoterminowy, ale również pod własne użytkowanie jako second home w Hiszpanii.</p>
+        <h3>Apartamenty i wille od deweloperów</h3>
+        <p>Apartamenty i wille od deweloperów to rozwiązanie dla osób, które chcą kupić nieruchomość w uporządkowanym procesie, bez konieczności prowadzenia budowy. Nowe inwestycje powstają w najlepszych lokalizacjach — blisko morza, infrastruktury i stref turystycznych, co bezpośrednio wpływa na ich potencjał inwestycyjny.</p>
+        <h3>Strategie inwestycyjne</h3>
+        <p>W zależności od celu zakupu można wybrać różne strategie: zakup mieszkania pod wynajem, apartamentu wakacyjnego lub willi jako długoterminowej inwestycji. Costa Blanca pozostaje jednym z najbardziej przewidywalnych rynków nieruchomości w Hiszpanii, szczególnie w pasie Alicante–Benidorm.</p>
+      </section>
 
       <section class="cta-box contact-box" id="contact">
         <h2>Zapytaj o aktualne inwestycje</h2>
@@ -1026,4 +1115,4 @@
   }
   </script>
 </body>
-</html>
+</h
